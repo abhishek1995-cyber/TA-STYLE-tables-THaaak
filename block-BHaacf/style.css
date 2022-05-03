@@ -1,0 +1,446 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* custom styles */
+
+/* my resets */
+*,
+::before
+::after
+{
+    box-sizing: border-box;
+}
+body {
+    /* padding: 0 32px; */
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+/* variables */
+:root {
+    --primary: #EE553A;
+    --secondary:#303B44;
+    --para:#A3A3A3;
+}
+.btn {
+    color: white;
+    padding: 10px;
+    background-color: var(--primary);
+    border: none;
+    text-transform: uppercase;
+}
+/* flex */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.flex-48 {
+    flex: 0 1 48%;
+}
+.column {
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.align-strech {
+    align-items: stretch;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+/* general */
+
+.header {
+    padding: 20px 0px;
+    position: relative;
+    z-index: 1;
+    
+}
+.logo h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+.logo span {
+    color: var(--primary);
+}
+.logo  a {
+    color: white;
+}
+.nav-header a {
+    margin-left: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.active a {
+    color: var(--primary);
+}
+.header .btn  {
+    font-size: 10px;
+    background-color: #EE553A;
+}
+/* hero */
+
+.video {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.hero figure {
+    position: relative;
+}
+.gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    color: white;
+}
+.gradient p {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 25px;
+}
+.gradient h2 {
+    font-size: 56px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.gradient .btn {
+    font-size: 10px;
+}
+/* program-section */
+.program-sec{
+    margin-top: 850px;
+    margin-bottom: 100px;
+}
+
+.center {
+    text-align: center;
+}
+.center h3 {
+    font-size: 24px;
+    color: black;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.center span {
+    color: var(--primary);
+}
+.center img {
+    margin: 20px 0px;
+}
+.center p {
+    margin-bottom: 5px;
+    color: var(--para);
+    font-size: 12px;
+}
+/* templates */
+
+.template {
+    margin-top: 80px;
+}
+.template img {
+    margin-right: 20px;
+}
+.program-div h4{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.program-div p {
+    color: var(--para);
+    font-size: 14px;
+    line-height: 1.5;
+}
+.program-div a {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.program-div {
+    margin-bottom: 50px;
+}
+.program-content {
+    height: 100px;
+}
+.program-content small {
+    text-transform: capitalize;
+    color: aqua;
+}
+
+/* content */
+
+.content {
+    background-image: url(./assets/cta-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.content-art {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+} 
+.content-art  h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+.content-art span {
+    color: var(--primary);
+}
+.content-art p {
+    margin-bottom: 5px;
+}
+.content-art .btn {
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+/* class */
+
+
+.aside {
+    width: 25%;
+    margin: 60px 0px;
+}
+.aside-box {
+    display: flex;
+    align-items: center;
+    padding: 25px 0px;
+    padding-left: 20px;
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+}
+.active h4 {
+    font-size: 18px;
+    color: var(--primary);
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+.aside-box h5 {
+    color: black;
+    text-transform: capitalize;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.aside .btn {
+    padding: 17px 62px;
+    border-radius: 3px;
+}
+.class-rt {
+    width: 67%;
+    margin: 60px 0px;
+}
+.class-rt h5 {
+    color: black;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px 0px;
+}
+.class-rt p {
+    font-size: 12px;
+    color: var(--para);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* table */
+.table-art {
+    background-image: url(./assets/schedule-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 850px;
+    position: relative;
+}
+.table-container {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}
+.table-container h5 {
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.table-container img {
+    margin: 20px 0px;
+}
+.table-container p {
+    font-size: 12px;
+    color: white;
+    line-height: 1.5;
+}
+.heading-table {
+    text-transform: capitalize;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: white;
+}
+.table-art span {
+    color: var(--primary);
+}
+.table th,td{
+    border: 1px solid white;
+    padding: 30px 50px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 10px;
+}
+
+/* expert */
+
+.expert-art {
+    margin-top: 100px;
+}
+.experts {
+    width: 290px;
+    margin: 70px 0px;
+    padding: 20px;
+    box-shadow: 0 2px 10px black;
+}
+.experts h2 {
+    color: var(--primary);
+    text-transform: capitalize;
+    font-size: 12px;
+    margin: 15px 0px;
+}
+.experts h3 {
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.experts p {
+    font-size: 14px;
+    color: var(--para);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.navbar-expert a {
+    margin-right: 15px;
+    color: black;
+    font-size: 12px;
+}
+
+/* map */
+.map {
+    width: 50%;
+}
+
+.backround-image{
+    background-image: url(./assets/contact-bg.jpg);
+    width: 50%;
+    height: 400px;
+}
+.form {
+    padding: 50px;
+}
+fieldset {
+    padding: 20px;
+    background-color: white;
+    border: none;
+}
+.form input {
+    padding: 10px 10px;
+    padding-right: 125px;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: var(--para);
+    margin-bottom: 20px;
+    
+}
+.subject input {
+    padding-right: 452px;
+}
+.form textarea {
+    padding-left: 10px;
+    text-transform: capitalize;
+    color: var(--para);
+    font-size: 14px;
+}
+.form .btn {
+    margin-top: 17px;
+    font-size: 12px;
+}
+
+/* footer */
+
+.footer {
+    padding: 30px 0px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.footer span {
+    color: var(--primary);
+}
